@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms Diagnosis</title>
+</head>
+<body>
+    <h1>Symptoms Diagnosis</h1>
+    <form method="post">
+        <label for="symptoms">Enter symptoms (comma-separated):</label>
+        <input type="text" id="symptoms" name="symptoms" required>
+        <button type="submit">Diagnose</button>
+    </form>
+    
+    {% if symptoms %}
+        <h2>Symptoms Order: {{ symptoms }}</h2>
+    {% endif %}
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
